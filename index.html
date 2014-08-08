@@ -21,9 +21,12 @@
 		font-size: 24pt;
 		display: block;
 		float: left;
-		margin:12pt 0;	
-		margin-right:24pt;
+		margin-top:12pt;
+		margin-bottom: 0;	
+		margin-right:6pt;
 		color: gray;
+		padding:4pt;
+		line-height: 24pt;
 	}
 	h2:hover {
 		color: black;		
@@ -36,6 +39,11 @@
 	}
 	div.content.active {
 		display: block !important;
+		margin-top: 0;
+	}
+	#menu {
+		padding: 0;
+		margin: 0;	
 	}
 	a {
 		color: black;
@@ -70,8 +78,8 @@ function click_menuitem(item) {
 <body>
 	<h1>Niels Müller</h1>
   	<div id="menu">
-  		<h2 id="kontakt" class="menuitem active" onclick="click_menuitem(this);">Kontakt</h2>
-  		<h2 id="studium" class="menuitem" onclick="click_menuitem(this);">Studium</h2>
+  		<h2 id="kontakt" class="menuitem active" onclick="click_menuitem(this);">Kontakt</h2><h2>|</h2>
+  		<h2 id="studium" class="menuitem" onclick="click_menuitem(this);">Studium</h2><h2>|</h2>
   		<h2 id="arbeit" class="menuitem" onclick="click_menuitem(this);">Arbeit</h2>
   		<div style="clear:both;"></div>
   	</div>
