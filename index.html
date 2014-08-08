@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="de-de">
+<head>
+<meta charset="utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+<style>
+	body {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 300;	
+		font-size: 12pt;
+		padding-left: 24pt;
+	}
+	h1 {
+		font-weight: 400;	
+		font-size: 48pt;
+		margin:24pt 0;
+	}
+	h2 {
+		font-weight: 300;
+		font-size: 24pt;
+		display: block;
+		float: left;
+		margin:12pt 0;	
+		margin-right:24pt;
+		color: gray;
+	}
+	h2:hover {
+		color: black;		
+	}
+	.menuitem.active {	
+		color: black !important;
+	}
+	div.content {
+		display:none; 	
+	}
+	div.content.active {
+		display: block !important;
+	}
+	a {
+		color: black;
+		text-decoration: none;
+	}
+	a:visited {
+		color: black;	
+	}
+	a:hover {
+		color: gray;	
+	}
+</style>
+
+<script >
+function click_menuitem(item) {	
+//	alert("hi");
+	var items = document.getElementsByClassName("menuitem");		
+	for (i=0;i<items.length;i++) {
+		items[i].setAttribute("class","menuitem");
+	}
+	item.setAttribute("class","menuitem active");
+	var contents = document.getElementsByClassName("content");
+	for (i=0;i<contents.length;i++) {
+		contents[i].setAttribute("class","content");
+	}
+	document.getElementById("content_"+item.id).setAttribute("class","content active");
+}
+</script>
+
+</head>
+
+<body>
+	<h1>Niels Müller</h1>
+  	<div id="menu">
+  		<h2 id="kontakt" class="menuitem active" onclick="click_menuitem(this);">Kontakt</h2>
+  		<h2 id="studium" class="menuitem" onclick="click_menuitem(this);">Studium</h2>
+  		<h2 id="arbeit" class="menuitem" onclick="click_menuitem(this);">Arbeit</h2>
+  		<div style="clear:both;"></div>
+  	</div>
+  	<div id="content">
+		<div id="content_kontakt" class="content active">
+			<p>Kurt-Schumacher-Allee 11<br />28329 Bremen</p>
+			<p>
+			<a href="mailto:post@nielsm.de">post@nielsm.de</a>
+			<br />
+			<a href="https://keybase.io/niels" target="_blank">keybase.io/niels</a>
+			<br />
+         +49421 84738198
+         </p>
+		</div>
+		<div id="content_studium" class="content">
+			<p>BSc. Physik (2009-2013, TU Darmstadt) <br />
+            Thesis: Molekulardynamik-Simulation einer ionischen Flüssigkeit
+        	<p/>
+        	<p>MSc. Physik (seit 2013, Uni Bremen)</p>
+		</div>
+		<div id="content_arbeit" class="content">
+		</div>
+  	</div>  
+</body>
