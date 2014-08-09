@@ -11,25 +11,33 @@
 		font-size: 12pt;
 		padding-left: 24pt;
 	}
+	#container {
+		width:  40em;
+		margin: auto;
+		box-shadow: 0 0 0.5em gray;	
+		padding:24pt;
+	}
 	h1 {
 		font-weight: 400;	
 		font-size: 48pt;
-		margin:24pt 0;
+		margin:0;
 	}
 	h2 {
 		font-weight: 300;
 		font-size: 24pt;
 		display: block;
 		float: left;
-		margin-top:12pt;
-		margin-bottom: 0;	
-		margin-right:6pt;
-		color: gray;
-		padding:4pt;
+		margin: 0;		
+		color: white;
+		padding:4pt 0;
 		line-height: 24pt;
 	}
 	h2:hover {
 		color: black;		
+	}
+	h3 {
+		font-weight: 300;
+		font-size: 18pt;
 	}
 	.menuitem.active {	
 		color: black !important;
@@ -43,7 +51,24 @@
 	}
 	#menu {
 		padding: 0;
-		margin: 0;	
+		margin: 0 -24pt;
+		
+		padding-left: 24pt;
+		background:#DC0000;	
+		
+	}
+	#menu .sep {
+		font-weight: 300;
+		font-size: 24pt;
+		display: block;
+		float: left;
+		background-color: white;
+		height:28pt;
+		width: 1px;
+		margin: 2pt 8pt;		
+		
+			
+		padding:0;
 	}
 	a {
 		color: black;
@@ -76,10 +101,11 @@ function click_menuitem(item) {
 </head>
 
 <body>
+	<div id="container">
 	<h1>Niels Müller</h1>
   	<div id="menu">
-  		<h2 id="kontakt" class="menuitem active" onclick="click_menuitem(this);">Kontakt</h2><h2>|</h2>
-  		<h2 id="studium" class="menuitem" onclick="click_menuitem(this);">Studium</h2><h2>|</h2>
+  		<h2 id="kontakt" class="menuitem active" onclick="click_menuitem(this);">Kontakt</h2><div class="sep"></div>
+  		<h2 id="studium" class="menuitem" onclick="click_menuitem(this);">Studium</h2><div class="sep"></div>
   		<h2 id="arbeit" class="menuitem" onclick="click_menuitem(this);">Arbeit</h2>
   		<div style="clear:both;"></div>
   	</div>
@@ -101,6 +127,12 @@ function click_menuitem(item) {
         	<p>MSc. Physik (seit 2013, Uni Bremen)</p>
 		</div>
 		<div id="content_arbeit" class="content">
+			<h3>HiWi Tätigkeiten:</h3>
+			<p>2012-2013: Deutsches Kunststoffinstitut / Fraunhofer LBF, Darmstadt</p>
+			<p>2013: Institut für Kernphysik (AG Von Neumann-Cosel), TU Darmstadt</p>
+			<p>2013: Center for Smart Interfaces (AG Van der Vegt), TU Darmstadt </p>
+			<p>2014: Bremer Center of Computational Material Science (AG Ploshikhin), Uni Bremen</p>
 		</div>
-  	</div>  
+  	</div> 
+  	</div> 
 </body>
