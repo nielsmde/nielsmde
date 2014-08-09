@@ -28,7 +28,7 @@
 		display: block;
 		float: left;
 		margin: 0;		
-		color: white;
+		color: #FFFFFF;
 		padding:4pt 0;
 		line-height: 24pt;
 	}
@@ -42,19 +42,26 @@
 	.menuitem.active {	
 		color: black !important;
 	}
+	#content {
+		position: static;	
+	}
 	div.content {
-		display:none; 	
+		display:block;
+		opacity:0;
+		position:absolute;
 	}
 	div.content.active {
 		display: block !important;
 		margin-top: 0;
+		opacity: 1;
+		transition: opacity .5s;
 	}
 	#menu {
 		padding: 0;
 		margin: 0 -24pt;
 		
 		padding-left: 24pt;
-		background:#DC0000;	
+		background:#FF3300;	
 		
 	}
 	#menu .sep {
@@ -62,7 +69,7 @@
 		font-size: 24pt;
 		display: block;
 		float: left;
-		background-color: white;
+		background-color: #FFFFFF;
 		height:28pt;
 		width: 1px;
 		margin: 2pt 8pt;		
@@ -126,13 +133,14 @@ function click_menuitem(item) {
         	<p/>
         	<p>MSc. Physik (seit 2013, Uni Bremen)</p>
 		</div>
-		<div id="content_arbeit" class="content">
+		<div id="content_arbeit" class="content" style="position:static;">
 			<h3>HiWi Tätigkeiten:</h3>
 			<p>2012-2013: Deutsches Kunststoffinstitut / Fraunhofer LBF, Darmstadt</p>
 			<p>2013: Institut für Kernphysik (AG Von Neumann-Cosel), TU Darmstadt</p>
 			<p>2013: Center for Smart Interfaces (AG Van der Vegt), TU Darmstadt </p>
 			<p>2014: Bremer Center of Computational Material Science (AG Ploshikhin), Uni Bremen</p>
 		</div>
+		<div style="position:relative;"></div>
   	</div> 
   	</div> 
 </body>
