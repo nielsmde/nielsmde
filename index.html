@@ -4,6 +4,8 @@
 <head>
 <meta charset="utf-8" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
 <style>
 	body {
 		font-family: 'Open Sans', sans-serif;
@@ -109,9 +111,7 @@
 
 <script >
 function click_menuitem(item) {	
-//	alert("hi");
-	var items = document.getElementsByClassName("menuitem");		
-//	alert(item.className);
+	var items = document.getElementsByClassName("menuitem");
 	for (i=0;i<items.length;i++) {
 		items[i].className = items[i].className.replace('active','');
 	}
@@ -127,38 +127,48 @@ function click_menuitem(item) {
 </head>
 
 <body>
-	<div id="container">
-	<h1>Niels Müller</h1>
-  	<div id="menu">
-  		<h2 id="kontakt" class="menuitem active" onclick="click_menuitem(this);">Kontakt</h2><div class="sep"></div>
-  		<h2 id="studium" class="menuitem" onclick="click_menuitem(this);">Studium</h2><div class="sep"></div>
-  		<h2 id="arbeit" class="menuitem" onclick="click_menuitem(this);">Arbeit</h2>
-  		<div style="clear:both;"></div>
-  	</div>
-  	<div id="content">
-		<div id="content_kontakt" class="content active">
-			<p>Kurt-Schumacher-Allee 11<br />28329 Bremen</p>
-			<p>
-			<a href="ma	ilto:post@nielsm.de">post@nielsm.de</a>
-			<br />
-			<a href="https://keybase.io/niels" target="_blank">keybase.io/niels</a>
-			<br />
-         +49421 84738198
-         </p>
-		</div>
-		<div id="content_studium" class="content">
-			<p>BSc. Physik (2009-2013, TU Darmstadt) <br />
-            Thesis: Molekulardynamik-Simulation einer ionischen Flüssigkeit
-        	<p/>
-        	<p>MSc. Physik (seit 2013, Uni Bremen)</p>
-		</div>
-		<div id="content_arbeit" class="content">
-			<h3>HiWi Tätigkeiten:</h3>
-			<p>2012-2013: Deutsches Kunststoffinstitut / Fraunhofer LBF, Darmstadt</p>
-			<p>2013: Institut für Kernphysik (AG Von Neumann-Cosel), TU Darmstadt</p>
-			<p>2013: Center for Smart Interfaces (AG Van der Vegt), TU Darmstadt </p>
-			<p>2014: Bremer Center of Computational Material Science (AG Ploshikhin), Uni Bremen</p>
-		</div>
-  	</div> 
-  	</div> 
+  <div id="container">
+    <h1>Niels Müller</h1>
+    <div id="menu">
+      <h2 id="kontakt" class="menuitem active" onclick="click_menuitem(this);">Kontakt</h2><div class="sep"></div>
+      <h2 id="studium" class="menuitem" onclick="click_menuitem(this);">Studium</h2><div class="sep"></div>
+      <h2 id="arbeit" class="menuitem" onclick="click_menuitem(this);">Arbeit</h2>
+      <div style="clear:both;"></div>
+    </div>
+    <div id="content">
+      <div id="content_kontakt" class="content active">
+        <ul class="fa-ul">
+          <li>
+            <i class="fa-li fa fa-map-marker"></i>Kurt-Schumacher-Allee 11, 28329 Bremen
+          </li>
+          <li>
+            <i class="fa-li fa fa-phone"></i> +49421 84738198
+          </li>
+          <li>
+            <a href="mailto:post@nielsm.de"><i class="fa-li fa fa-envelope"></i> post@nielsm.de</a>
+          </li>
+          <li>
+            <a href="https://keybase.io/niels" target="_blank"><i class="fa-li fa fa-key"></i> keybase.io/niels</a>
+          </li>
+          <li>
+            <a href="https://github.com/nielsmde"><i class="fa-li fa fa-github"></i></i>nielsmde</a>
+          </li>
+        </ul>
+      </div>
+    <div id="content_studium" class="content">
+      <p>
+        BSc. Physik (2009-2013, TU Darmstadt) <br />
+        Thesis: Molekulardynamik-Simulation einer ionischen Flüssigkeit
+      <p/>
+      <p>MSc. Physik (2013-2015, Uni Bremen)</p>
+      </div>
+      <div id="content_arbeit" class="content">
+        <h3>HiWi Tätigkeiten:</h3>
+        <p>2012-2013: Deutsches Kunststoffinstitut / Fraunhofer LBF, Darmstadt</p>
+        <p>2013: Institut für Kernphysik (AG Von Neumann-Cosel), TU Darmstadt</p>
+        <p>2013: Center for Smart Interfaces (AG Van der Vegt), TU Darmstadt </p>
+        <p>2014: Bremer Center of Computational Material Science (AG Ploshikhin), Uni Bremen</p>
+      </div>
+    </div>
+  </div>
 </body>
