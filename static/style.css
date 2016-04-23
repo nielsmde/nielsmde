@@ -1,0 +1,125 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+#container {
+  width:  40em;
+  margin: auto;
+  box-shadow: 0 0 0.5em gray;
+  padding:2em;
+  padding-bottom: 0px;
+}
+h1 {
+  font-weight: 400;
+  font-size: 4em;
+  margin:0;
+}
+.menuitem {
+  font-weight: 300;
+  font-size: 2em;
+  display: block;
+  float: left;
+  margin: 0;
+  color: #BBB;
+  padding:0.15em 0;
+  line-height: 1em;
+  cursor: pointer;
+}
+.menuitem:hover {
+  color: black;
+}
+h3 {
+  font-weight: 300;
+  font-size: 1.5em;
+}
+thead {
+  font-weight: 400;
+  font-size: 1.2em;
+  height: 3em;
+
+}
+
+.menuitem.active {
+  color: black !important;
+}
+#content {
+  position: static;
+}
+.content {
+  display:none;
+}
+.content.active {
+  display: block !important;
+}
+#menu .sep {
+  display: block;
+  float: left;
+  background-color: #BBB;
+  height:2.2em;
+  width: 1px;
+  margin: 0.2em 8pt;
+  padding:0;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: gray;
+}
+
+img.profile {
+  height: 12em;
+  float: right;
+}
+
+.badge {
+  position: relative;
+  bottom: -42px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 480pt){
+  body {
+    overflow-x: hidden;
+  }
+  #container {
+    width: 100%;
+    padding:0;
+    box-shadow:none;
+  }
+  .content {
+    height: auto;
+    width: 95%;
+    font-size: 24pt;
+  }
+  #menu {
+    padding: 0 1em;
+    margin:0 -1em;
+  }
+  #menu .sep {
+    width: 2px;
+    height: 52pt;
+    margin: 6pt 12pt;
+  }
+  h1 {
+    font-size: 72pt;
+    line-height: normal;
+  }
+  .menuitem {
+    font-size: 48pt;
+    line-height: 48pt;
+    padding: 8pt 0;
+  }
+  li#content_cv {
+    font-weight: 400;
+  }
+
+}
+
