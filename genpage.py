@@ -4,7 +4,7 @@ def main():
     content = {}
 
     for c in 'contact', 'cv', 'work':
-        with open(c+'.md') as f:
+        with open(c + '.md') as f:
             content[c] = check_output(['pandoc', '-t', 'html'], stdin=f).decode(encoding='UTF-8')
 
     with open('template.html') as f:
@@ -15,11 +15,9 @@ def main():
     template = template.replace('{{%','{')
     template = template.replace('%}}','}')
 
-
     with open('index.html', 'w') as out:
         out.write(template.format(**content))
 
-    #call(['pandoc', '_index.html', '-o', '__index.html'])
 
 if __name__ == '__main__':
     main()

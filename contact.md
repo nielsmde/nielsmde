@@ -5,7 +5,7 @@
 </a>
 </li>
 <li>
-<i class="fa-li fa fa-phone"></i>+49421 84738198
+<i class="fa-li fa fa-phone"></i>+496151 7852453
 </li>
 <li>
 <a href="mailto:post@nielsm.de"><i class="fa-li fa fa-envelope"></i>post@nielsm.de</a>
@@ -17,4 +17,3 @@
 <a href="https://github.com/nielsmde"><i class="fa-li fa fa-github"></i></i>nielsmde</a>
 </li>
 </ul>
-

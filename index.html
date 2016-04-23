@@ -2,149 +2,32 @@
 
 <html lang="de-de">
 <head>
-<meta charset="utf-8" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<style>
-	body {
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 300;
-	}
-
-	#container {
-		width:  40em;
-		margin: auto;
-		box-shadow: 0 0 0.5em gray;
-		padding:2em;
-	}
-	h1 {
-		font-weight: 400;
-		font-size: 4em;
-		margin:0;
-	}
-	.menuitem {
-		font-weight: 300;
-		font-size: 2em;
-		display: block;
-		float: left;
-		margin: 0;
-		color: #BBB;
-		padding:0.15em 0;
-		line-height: 1em;
-		cursor: pointer;
-	}
-	.menuitem:hover {
-		color: black;
-	}
-	h3 {
-		font-weight: 300;
-		font-size: 1.5em;
-	}
-	.menuitem.active {
-		color: black !important;
-	}
-	#content {
-		position: static;
-	}
-	.content {
-		display:none;
-		//height: 12em;
-	}
-	.content.active {
-		display: block !important;
-	}
-	#menu .sep {
-		display: block;
-		float: left;
-		background-color: #BBB;
-		height:2.2em;
-		width: 1px;
-		margin: 0.2em 8pt;
-		padding:0;
-	}
-	a {
-		color: black;
-		text-decoration: none;
-	}
-	a:visited {
-		color: black;
-	}
-	a:hover {
-		color: gray;
-	}
-	@media (max-width: 480pt){
-	body {
-		overflow-x: hidden;
-	}
-	#container {
-			width: 100%;
-			padding:0;
-			box-shadow:none;
-	}
-	.content {
-		height: auto;
-		width: 95%;
-		font-size: 24pt;
-	}
-	#menu {
-		padding: 0 1em;
-		margin:0 -1em;
-	}
-	#menu .sep {
-		width: 2px;
-		height: 52pt;
-		margin: 6pt 12pt;
-	}
-	h1 {
-		font-size: 72pt;
-		line-height: normal;
-	}
-	.menuitem {
-		font-size: 48pt;
-		line-height: 48pt;
-		padding: 8pt 0;
-	}
-  	li#content_cv {
-  		font-weight: 400;
-  }
-
-	}
-</style>
-
-<script >
-function click_menuitem(item) {
-	var items = document.getElementsByClassName("menuitem");
-	for (i=0;i<items.length;i++) {
-		items[i].className = items[i].className.replace('active','');
-	}
-	item.className +=" active";
-	var contents = document.getElementsByClassName("content");
-	for (i=0;i<contents.length;i++) {
-		contents[i].className = contents[i].className.replace("active","");
-	}
-	document.getElementById("content_"+item.id).className += " active";
-}
-</script>
-
+	<meta charset="utf-8" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="/static/style.css" />
+	<script src="/static/navigation.js"></script>
 </head>
 
 <body>
-  <div id="container">
-    <h1>Niels Müller</h1>
-    <div id="menu">
-      <h2 id="contact" class="menuitem active" onclick="click_menuitem(this);">contact</h2><div class="sep"></div>
-      <h2 id="cv" class="menuitem" onclick="click_menuitem(this);">cv</h2><div class="sep"></div>
-      <h2 id="work" class="menuitem" onclick="click_menuitem(this);">work</h2>
-      <div style="clear:both;"></div>
-    </div>
-    <div id="content">
-      <div id="content_contact" class="content active">
-        <ul class="fa-ul">
+	<div id="container">
+	<!--	<img src="/static/foto.png" class="profile" /> -->
+		<h1>Niels Müller</h1>
+		<div id="menu">
+			<h2 id="contact" class="menuitem active" onclick="click_menuitem(this);">contact</h2><div class="sep"></div>
+			<h2 id="cv" class="menuitem" onclick="click_menuitem(this);">cv</h2><div class="sep"></div>
+			<h2 id="work" class="menuitem" onclick="click_menuitem(this);">work</h2>
+			<div style="clear:both;"></div>
+		</div>
+		<div id="content">
+			<div id="content_contact" class="content active">
+				<ul class="fa-ul">
 <li>
 <a href="http://www.openstreetmap.org/#map=19/49.88281/8.65450"> <i class="fa-li fa fa-map-marker"></i>Barkhausstraße 64, 64289 Darmstadt </a>
 </li>
 <li>
-<i class="fa-li fa fa-phone"></i>+49421 84738198
+<i class="fa-li fa fa-phone"></i>+496151 7852453
 </li>
 <li>
 <a href="mailto:post@nielsm.de"><i class="fa-li fa fa-envelope"></i>post@nielsm.de</a>
@@ -157,19 +40,23 @@ function click_menuitem(item) {
 </li>
 </ul>
 
-      </div>
-    <div id="content_cv" class="content">
-      <ol style="list-style-type: upper-roman">
-<li><p>Studium</p>
-<table>
+			</div>
+			<div id="content_cv" class="content">
+				<table>
 <colgroup>
 <col width="35%" />
 <col width="65%" />
 </colgroup>
+<thead>
+<tr class="header">
+<th align="left">I. Studium</th>
+<th align="left"></th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td align="left"><strong>10/2013 - 10/2015</strong></td>
-<td align="left"><strong>MSc. Physik</strong> an der Universität Bremen (Note 1,1)</td>
+<td align="left"><strong>MSc. Physik</strong> an der Universität Bremen</td>
 </tr>
 <tr class="even">
 <td align="left">Schwerpunkte</td>
@@ -181,7 +68,7 @@ function click_menuitem(item) {
 </tr>
 <tr class="even">
 <td align="left"><strong>10/2009 - 02/2013</strong></td>
-<td align="left"><strong>BSc. Physik</strong> an der TU Darmstadt (Note 2,5)</td>
+<td align="left"><strong>BSc. Physik</strong> an der TU Darmstadt</td>
 </tr>
 <tr class="odd">
 <td align="left">Fachkurse</td>
@@ -196,13 +83,18 @@ function click_menuitem(item) {
 <td align="left">Molekulardynamiksimulation einer ionischen Flüssigkeit</td>
 </tr>
 </tbody>
-</table></li>
-<li><p>HiWi-Jobs</p>
+</table>
 <table>
 <colgroup>
 <col width="35%" />
 <col width="65%" />
 </colgroup>
+<thead>
+<tr class="header">
+<th align="left">II. HiWi-Jobs</th>
+<th align="left"></th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td align="left">04/2014 - 12/2014</td>
@@ -237,13 +129,18 @@ function click_menuitem(item) {
 <td align="left">Herstellung von Probekörpern am Extruder, DSC Messungen</td>
 </tr>
 </tbody>
-</table></li>
-<li><p>Zivildienst</p>
+</table>
 <table>
 <colgroup>
 <col width="35%" />
 <col width="65%" />
 </colgroup>
+<thead>
+<tr class="header">
+<th align="left">III. Zivildienst</th>
+<th align="left"></th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td align="left">09/2008 - 05/2009</td>
@@ -254,84 +151,83 @@ function click_menuitem(item) {
 <td align="left">Seniorenarbeit: Hilfe beim Einkauf, Unterstützung zweier Seniorencafés</td>
 </tr>
 </tbody>
-</table></li>
-<li><p>Schule</p>
+</table>
 <table>
 <colgroup>
 <col width="35%" />
 <col width="65%" />
 </colgroup>
+<thead>
+<tr class="header">
+<th align="left">IV. Schule</th>
+<th align="left"></th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td align="left">08/1999 - 06/2008</td>
-<td align="left">Georg-Christoph-Lichtenberg Gesamtschule Ober-Ramstadt (Note 1,8)</td>
+<td align="left">Georg-Christoph-Lichtenberg Gesamtschule Ober-Ramstadt</td>
 </tr>
 </tbody>
-</table></li>
-<li><p>Zusatzqualifikationen</p>
+</table>
 <table>
 <colgroup>
-<col width="35%" />
-<col width="65%" />
+<col width="100%" />
 </colgroup>
+<thead>
+<tr class="header">
+<th align="left">V. Zusatzqualifikationen</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td align="left">1. Sprachen</td>
-<td align="left"></td>
+<td align="left"><strong>Sprachen</strong>: Englisch, Französisch, Norwegisch</td>
 </tr>
 <tr class="even">
-<td align="left">Englisch</td>
-<td align="left">fließend</td>
+<td align="left"><strong>Software</strong>: Linux, Git, Marc Mentat</td>
 </tr>
 <tr class="odd">
-<td align="left">Französisch</td>
-<td align="left">erweiterte Grundkenntnisse</td>
-</tr>
-<tr class="even">
-<td align="left">Norwegisch</td>
-<td align="left">Grundkenntnisse</td>
-</tr>
-<tr class="odd">
-<td align="left">2. Software</td>
-<td align="left"></td>
-</tr>
-<tr class="even">
-<td align="left">Linux, Git</td>
-<td align="left">sicherer Umgang (im Studium und privat)</td>
-</tr>
-<tr class="odd">
-<td align="left">Marc Mentat</td>
-<td align="left">sicherer Umgang (FEM Simulationen im Masterstudium)</td>
-</tr>
-<tr class="even">
-<td align="left">3. Programmiersprachen</td>
-<td align="left"></td>
-</tr>
-<tr class="odd">
-<td align="left">Python</td>
-<td align="left">sehr gute Kenntnisse</td>
-</tr>
-<tr class="even">
-<td align="left">C, Fortran</td>
-<td align="left">gute Kenntnisse</td>
-</tr>
-<tr class="odd">
-<td align="left">C++</td>
-<td align="left">Grundkenntnisse</td>
+<td align="left"><strong>Programmiersprachen</strong>: Python, C, Fortran</td>
 </tr>
 </tbody>
-</table></li>
-<li><p>Persönliche Interessen</p>
-<p>Seid meiner Kindheit fahre ich Kanu (Canadier &amp; Kajak), größtenteils auf Wanderflüssen, teilweise leichtes Wildwasser. In Bremen habe ich das Kanupolo für mich entdeckt.</p>
-<p>Meine liebsten Urlaube sind mit dem Zelt, gerne auch im Kombination mit Bootfahren.</p>
-<p>Im Urlaub un zu anderen Gelegenheiten fotografiere ich gerne mit einer Spiegelreflexkamera.</p></li>
+</table>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">VI. Persönliche Interessen</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Seid meiner Kindheit fahre ich Kanu (Canadier &amp; Kajak), größtenteils auf Wanderflüssen, teilweise leichtes Wildwasser. In Bremen habe ich das Kanupolo für mich entdeckt.</td>
+</tr>
+<tr class="even">
+<td align="left">Meine liebsten Urlaube sind mit dem Zelt, gerne auch in Kombination mit Bootfahren.</td>
+</tr>
+<tr class="odd">
+<td align="left">Im Urlaub und zu anderen Gelegenheiten fotografiere ich gerne mit einer Spiegelreflexkamera.</td>
+</tr>
+</tbody>
+</table>
+
+			</div>
+			<div id="content_work" class="content">
+				<h2 id="notebook-extensions"><a href="http://github.com/nielsmde/notebook-extensions">Notebook Extensions</a></h2>
+<p>Eine Sammlung verschiedener JavaScript-Erweiterungen des Jupyter Notebooks:</p>
+<ul>
+<li>Interaktives Inhaltsverzeichnis</li>
+<li>Slideshow Helfer</li>
+</ul>
+<h2 id="publikationen">Publikationen</h2>
+<ol style="list-style-type: decimal">
+<li>F. Neugebauer, N. Müller, V. Ploshikhin, S. Thiel, J. Ambrosy und G. Witt.<br /><em>Temperature effects on tensile properties of laser sintered polyamide 12</em>.<br />Materials Testing 57(7-8), 602-608 (2015) DOI: <a href="http://dx.doi.org/10.3139/120.110756">10.3139/120.110756</a></li>
 </ol>
 
-    </div>
-      <div id="content_work" class="content">
-        
-
-      </div>
-    </div>
-  </div>
+			</div>
+		</div>
+	</div>
+	<a href="https://www.uberspace.de"><img class="badge" src="static/badge-weiß.png" /></a>
 </body>

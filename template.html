@@ -2,151 +2,35 @@
 
 <html lang="de-de">
 <head>
-<meta charset="utf-8" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<style>
-	body {
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 300;
-	}
-
-	#container {
-		width:  40em;
-		margin: auto;
-		box-shadow: 0 0 0.5em gray;
-		padding:2em;
-	}
-	h1 {
-		font-weight: 400;
-		font-size: 4em;
-		margin:0;
-	}
-	.menuitem {
-		font-weight: 300;
-		font-size: 2em;
-		display: block;
-		float: left;
-		margin: 0;
-		color: #BBB;
-		padding:0.15em 0;
-		line-height: 1em;
-		cursor: pointer;
-	}
-	.menuitem:hover {
-		color: black;
-	}
-	h3 {
-		font-weight: 300;
-		font-size: 1.5em;
-	}
-	.menuitem.active {
-		color: black !important;
-	}
-	#content {
-		position: static;
-	}
-	.content {
-		display:none;
-		//height: 12em;
-	}
-	.content.active {
-		display: block !important;
-	}
-	#menu .sep {
-		display: block;
-		float: left;
-		background-color: #BBB;
-		height:2.2em;
-		width: 1px;
-		margin: 0.2em 8pt;
-		padding:0;
-	}
-	a {
-		color: black;
-		text-decoration: none;
-	}
-	a:visited {
-		color: black;
-	}
-	a:hover {
-		color: gray;
-	}
-	@media (max-width: 480pt){
-	body {
-		overflow-x: hidden;
-	}
-	#container {
-			width: 100%;
-			padding:0;
-			box-shadow:none;
-	}
-	.content {
-		height: auto;
-		width: 95%;
-		font-size: 24pt;
-	}
-	#menu {
-		padding: 0 1em;
-		margin:0 -1em;
-	}
-	#menu .sep {
-		width: 2px;
-		height: 52pt;
-		margin: 6pt 12pt;
-	}
-	h1 {
-		font-size: 72pt;
-		line-height: normal;
-	}
-	.menuitem {
-		font-size: 48pt;
-		line-height: 48pt;
-		padding: 8pt 0;
-	}
-  	li#content_cv {
-  		font-weight: 400;
-  }
-
-	}
-</style>
-
-<script >
-function click_menuitem(item) {
-	var items = document.getElementsByClassName("menuitem");
-	for (i=0;i<items.length;i++) {
-		items[i].className = items[i].className.replace('active','');
-	}
-	item.className +=" active";
-	var contents = document.getElementsByClassName("content");
-	for (i=0;i<contents.length;i++) {
-		contents[i].className = contents[i].className.replace("active","");
-	}
-	document.getElementById("content_"+item.id).className += " active";
-}
-</script>
-
+	<meta charset="utf-8" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="/static/style.css" />
+	<script src="/static/navigation.js"></script>
 </head>
 
 <body>
-  <div id="container">
-    <h1>Niels Müller</h1>
-    <div id="menu">
-      <h2 id="contact" class="menuitem active" onclick="click_menuitem(this);">contact</h2><div class="sep"></div>
-      <h2 id="cv" class="menuitem" onclick="click_menuitem(this);">cv</h2><div class="sep"></div>
-      <h2 id="work" class="menuitem" onclick="click_menuitem(this);">work</h2>
-      <div style="clear:both;"></div>
-    </div>
-    <div id="content">
-      <div id="content_contact" class="content active">
-        {%contact%}
-      </div>
-    <div id="content_cv" class="content">
-      {%cv%}
-    </div>
-      <div id="content_work" class="content">
-        {%work%}
-      </div>
-    </div>
-  </div>
+	<div id="container">
+	<!--	<img src="/static/foto.png" class="profile" /> -->
+		<h1>Niels Müller</h1>
+		<div id="menu">
+			<h2 id="contact" class="menuitem active" onclick="click_menuitem(this);">contact</h2><div class="sep"></div>
+			<h2 id="cv" class="menuitem" onclick="click_menuitem(this);">cv</h2><div class="sep"></div>
+			<h2 id="work" class="menuitem" onclick="click_menuitem(this);">work</h2>
+			<div style="clear:both;"></div>
+		</div>
+		<div id="content">
+			<div id="content_contact" class="content active">
+				{%contact%}
+			</div>
+			<div id="content_cv" class="content">
+				{%cv%}
+			</div>
+			<div id="content_work" class="content">
+				{%work%}
+			</div>
+		</div>
+	</div>
+	<a href="https://uberspace.de"><img class="badge" src="static/badge-weiß.png" /></a>
 </body>
