@@ -73,9 +73,9 @@ V. Zusatzqualifikationen
 --------------------------------------------------------------------------------
 **Sprachen**: Englisch, Französisch, Norwegisch
 
-**Software**: Linux, Git, Marc Mentat
+**Software**: Linux, Git, Gromacs
 
-**Programmiersprachen**: Python, C, Fortran
+**Programmiersprachen**: Python, C, C++, Fortran
 --------------------------------------------------------------------------------
 
 
